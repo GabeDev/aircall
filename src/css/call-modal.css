@@ -1,0 +1,167 @@
+.call-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.call-modal {
+  width: 100%;
+  height: 100%;
+  max-width: 376px;
+  max-height: 666px;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+}
+
+.call-header {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.call-status {
+  font-size: 18px;
+  padding: 10px;
+  color: #2AC420;
+  font-weight: 500;
+}
+
+.call-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.call-avatar {
+  width: 120px;
+  height: 120px;
+  background-color: #2AC420;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(42, 196, 32, 0.3);
+}
+
+.call-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.call-number {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.call-duration {
+  font-size: 18px;
+  color: #2AC420;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.call-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.call-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s;
+}
+
+.call-action-btn svg {
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+.call-action-btn span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.call-action-btn:hover svg,
+.call-action-btn:hover span {
+  opacity: 1;
+}
+
+.end-call-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ff3b30;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(255, 59, 48, 0.4);
+}
+
+.end-call-btn:hover {
+  transform: scale(1.1);
+  background-color: #ff1a1a;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.call-status.ringing {
+  animation: pulse 1s infinite;
+}
+
+/* Call status colors */
+.call-status:contains('Connecting') {
+  color: #FFC107;
+}
+
+.call-status:contains('Ringing') {
+  color: #FFC107;
+}
+
+.call-status:contains('Connected') {
+  color: #2AC420;
+}
+
+.call-status:contains('Call ended') {
+  color: #ff3b30;
+} 

@@ -1,0 +1,201 @@
+.activity-container {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.activity-tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.activity-tab {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #666;
+}
+
+.activity-tab.active {
+  color: #2AC420;
+  border-bottom: 2px solid #2AC420;
+  font-weight: bold;
+}
+
+.archive-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.activity-item:hover {
+  background-color: #f8f8f8;
+}
+
+.activity-icon {
+  margin-right: 15px;
+  color: #ff5722;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.activity-info {
+  flex: 1;
+}
+
+.activity-number {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.activity-type {
+  font-size: 12px;
+  color: #666;
+}
+
+.activity-time {
+  color: #999;
+  font-size: 12px;
+  text-align: right;
+}
+
+.activity-detail {
+  padding: 20px 0;
+}
+
+.activity-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity-detail-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.activity-detail-actions {
+  display: flex;
+}
+
+.activity-detail-item {
+  margin-bottom: 15px;
+}
+
+.activity-detail-label {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.activity-detail-value {
+  font-weight: bold;
+}
+
+.archive-button {
+  background-color: #2AC420;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s;
+}
+
+.archive-button:hover {
+  background-color: #229A1B;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #2AC420;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.back-button svg {
+  margin-right: 5px;
+}
+
+.no-activities {
+  text-align: center;
+  color: #666;
+  padding: 40px 0;
+}
+
+/* Error handling */
+.error-container {
+  text-align: center;
+  padding: 30px 20px;
+  color: #666;
+}
+
+.error-message {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff5722;
+}
+
+.error-info {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.loading-text {
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Call types styling */
+.call-missed {
+  color: #ff5722;
+}
+
+.call-answered {
+  color: #2AC420;
+}
+
+.call-voicemail {
+  color: #FFC107;
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #2AC420;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 

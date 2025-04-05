@@ -1,0 +1,462 @@
+/* Shared styles */
+.contacts-page,
+.history-page,
+.settings-page {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 40px;
+}
+
+/* CONTACTS PAGE */
+.search-container {
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 36px;
+  border-radius: 20px;
+  border: none;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.contacts-list {
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2AC420;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.favorite-icon {
+  margin-left: 5px;
+}
+
+.contact-phone {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.contact-company {
+  font-size: 12px;
+  color: #999;
+}
+
+.contact-call-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.contact-call-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.no-contacts {
+  text-align: center;
+  color: #666;
+  padding: 30px 0;
+}
+
+.add-contact-btn {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #2AC420;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(42, 196, 32, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.add-contact-btn:hover {
+  transform: scale(1.05);
+}
+
+/* HISTORY PAGE */
+.history-filters {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.history-filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  background: none;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background-color: #2AC420;
+  color: white;
+  border-color: #2AC420;
+}
+
+.history-list {
+  margin-top: 10px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.history-item.missed .history-name {
+  color: #ff5722;
+}
+
+.history-icon {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.history-number {
+  font-size: 13px;
+  color: #666;
+}
+
+.history-details {
+  text-align: right;
+  min-width: 80px;
+  margin-right: 10px;
+}
+
+.history-time {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 2px;
+}
+
+.history-duration {
+  font-size: 12px;
+  color: #2AC420;
+}
+
+.history-call-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.history-call-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.no-history {
+  text-align: center;
+  color: #666;
+  padding: 30px 0;
+}
+
+.clear-history-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  color: #666;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.clear-history-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* SETTINGS PAGE */
+.settings-page {
+  padding: 0 10px;
+}
+
+.settings-page h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.settings-section {
+  margin-bottom: 25px;
+}
+
+.settings-section h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #2AC420;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.user-email, .user-plan {
+  font-size: 13px;
+  color: #666;
+}
+
+.user-plan {
+  margin-top: 3px;
+  color: #2AC420;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.setting-info {
+  flex: 1;
+}
+
+.setting-name {
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.setting-description {
+  font-size: 13px;
+  color: #666;
+}
+
+.setting-value {
+  color: #666;
+}
+
+.about-row svg {
+  color: #999;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 22px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 11px;
+}
+
+.toggle-switch label:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + label {
+  background-color: #2AC420;
+}
+
+.toggle-switch input:checked + label:before {
+  transform: translateX(18px);
+}
+
+.settings-button {
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings-button svg {
+  margin-right: 5px;
+}
+
+.settings-button:hover {
+  background-color: #e0e0e0;
+}
+
+.settings-button.save-btn {
+  background-color: #2AC420;
+  color: white;
+  margin-left: 10px;
+}
+
+.settings-button.save-btn:hover {
+  background-color: #229A1B;
+}
+
+.settings-button.logout-btn {
+  color: #ff5722;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.forwarding-number {
+  display: flex;
+  padding-top: 10px;
+}
+
+.settings-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.settings-select {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+} 

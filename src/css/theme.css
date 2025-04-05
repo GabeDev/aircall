@@ -1,0 +1,211 @@
+/* Light Theme (Default) */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --secondary-text-color: #666666;
+  --tertiary-text-color: #999999;
+  --border-color: #f0f0f0;
+  --card-background: #ffffff;
+  --input-background: #f5f5f5;
+  --button-background: #f5f5f5;
+  --button-text-color: #333333;
+  --primary-color: #2AC420;
+  --accent-color: #FFC107;
+  --danger-color: #ff5722;
+  --missed-call-color: #ff5722;
+  --answered-call-color: #2AC420;
+  --voicemail-call-color: #FFC107;
+  --avatar-background: #2AC420;
+  --avatar-text-color: #ffffff;
+  --toggle-background: #cccccc;
+  --toggle-active-background: #2AC420;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --error-color: #e74c3c;
+}
+
+/* Dark Theme */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #f5f5f5;
+  --secondary-text-color: #bbbbbb;
+  --tertiary-text-color: #888888;
+  --border-color: #333333;
+  --card-background: #1e1e1e;
+  --input-background: #1e1e1e;
+  --button-background: #2a2a2a;
+  --button-text-color: #f5f5f5;
+  --primary-color: #2AC420;
+  --accent-color: #FFC107;
+  --danger-color: #ff5722;
+  --missed-call-color: #ff5722;
+  --answered-call-color: #2AC420;
+  --voicemail-call-color: #FFC107;
+  --avatar-background: #2AC420;
+  --avatar-text-color: #ffffff;
+  --toggle-background: #555555;
+  --toggle-active-background: #2AC420;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --error-color: #e57373;
+}
+
+/* Apply theme variables to components */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  background-color: var(--background-color);
+  box-shadow: 0 0 20px var(--shadow-color);
+}
+
+/* Header */
+header {
+  background-color: var(--background-color);
+}
+
+/* Activity Feed, History, and Contacts */
+.activity-container,
+.history-page,
+.contacts-page,
+.settings-page,
+.dialpad-container {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.activity-tab, 
+.filter-btn {
+  color: var(--secondary-text-color);
+}
+
+.activity-tab.active, 
+.filter-btn.active {
+  color: var(--primary-color);
+}
+
+.activity-item, 
+.history-item, 
+.contact-item,
+.settings-row {
+  border-bottom-color: var(--border-color);
+}
+
+.activity-type, 
+.history-number, 
+.contact-phone,
+.setting-description {
+  color: var(--secondary-text-color);
+}
+
+.activity-time, 
+.history-time, 
+.contact-company {
+  color: var(--tertiary-text-color);
+}
+
+/* Inputs and Search */
+.search-input,
+.phone-input,
+.settings-input,
+.settings-select {
+  background-color: var(--input-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+.search-box {
+  background-color: var(--input-background);
+  border-color: var(--border-color);
+}
+
+.search-icon,
+.clear-search {
+  color: var(--tertiary-text-color);
+}
+
+/* Filter Buttons */
+.filter-btn {
+  background-color: transparent;
+  border-color: var(--border-color);
+  color: var(--secondary-text-color);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Buttons */
+.archive-button,
+.settings-button,
+.clear-history-btn {
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+}
+
+.archive-button.save-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* DialPad */
+.dialpad-key {
+  background-color: var(--input-background);
+  color: var(--text-color);
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+  background-color: var(--background-color);
+  border-top-color: var(--border-color);
+}
+
+.nav-item {
+  color: var(--tertiary-text-color);
+}
+
+.nav-item.active {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+/* Toggle switch */
+.toggle-switch label {
+  background-color: var(--toggle-background);
+}
+
+.toggle-switch input:checked + label {
+  background-color: var(--toggle-active-background);
+}
+
+/* Empty states */
+.no-activities,
+.no-contacts,
+.no-history {
+  color: var(--secondary-text-color);
+}
+
+/* Avatars */
+.contact-avatar,
+.call-avatar,
+.user-avatar {
+  background-color: var(--avatar-background);
+  color: var(--avatar-text-color);
+}
+
+/* Call types */
+.call-missed,
+.history-item.missed .history-name {
+  color: var(--missed-call-color);
+}
+
+.call-answered {
+  color: var(--answered-call-color);
+}
+
+.call-voicemail {
+  color: var(--voicemail-call-color);
+} 
